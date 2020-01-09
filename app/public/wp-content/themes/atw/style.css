@@ -1,0 +1,1063 @@
+/*
+	Theme Name: Around The World
+	Theme URI: 
+	Description: Around the World Travel Agency
+	Version: 1.0
+	Author: Reid Naaykens
+	Author URI: 
+	Tags: Blank, HTML5, CSS3
+
+	License: MIT
+	License URI: http://opensource.org/licenses/mit-license.php
+*/
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+/* global box-sizing */
+*,
+*:after,
+*:before {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+/* html element 62.5% font-size for REM use */
+html {
+  font-size: 62.5%;
+}
+body {
+  font: 300 11px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #444;
+}
+/* clear */
+.clear:before,
+.clear:after {
+  content: " ";
+  display: table;
+}
+
+.clear:after {
+  clear: both;
+}
+.clear {
+  *zoom: 1;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+a {
+  color: #444;
+  text-decoration: none;
+}
+a:hover {
+  color: #444;
+}
+a:focus {
+  outline: 0;
+}
+a:hover,
+a:active {
+  outline: 0;
+}
+input:focus {
+  outline: 0;
+  border: 1px solid #04a4cc;
+}
+
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+
+/* wrapper */
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+/* header */
+.header {
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-attachment: fixed;
+  background-position: 0;
+}
+
+.header-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 0;
+}
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    height: 500px;
+  }
+
+  .header-container {
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+    height: 95px;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+/* logo */
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+@media (min-width: 668px) {
+  .logo {
+    justify-content: space-between;
+    width: 40%;
+    margin-bottom: 0;
+  }
+}
+.logo-img {
+}
+/* nav */
+.nav {
+}
+.nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav ul li {
+  padding: 12px 0;
+  text-align: center;
+  transition: all .3s ease;
+}
+
+.nav ul li.current-menu-item {
+  background-color: #df7900;
+}
+
+.nav ul li:hover{
+  background-color: #df790f;
+}
+.nav ul li a {
+  color: #fff;
+  font-size: 1.4rem;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    width: 60%;
+  }
+
+  .nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+    margin: 0;
+  }
+
+  .nav ul li {
+    padding: 15px 15px;
+    display: flex;
+    align-items: center;
+  }
+}
+.featuredImage {
+  height: 300px;
+  width: 100%;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 34%;
+}
+
+
+.searchform{
+  text-align: center;
+  margin: 20px;
+}
+.searchform input{
+  width:300px;
+  transition:width .3s ease-in-out;
+}
+.searchform input, .search-submit{
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid #ef7930;
+ 
+
+}
+
+@media(min-width:768px){
+  .searchform input:focus{
+    width:30%;
+  }
+}
+
+.search-submit{
+  background-color:#ef7930;
+  color:#fff;
+  font-weight:700;
+}
+/* sidebar */
+.sidebar {
+}
+/* footer */
+.footer {
+  background-color: rgba(0,0,0,.75);
+  border-top: 10px solid #ef7930;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-evenly;
+  color:#fff;
+}
+
+.footer-widget{
+  font-size:13px;
+  display:flex;
+  justify-content: space-evenly;
+  padding:0 30px;
+  flex-wrap:wrap;
+}
+
+.footer-widget > div{
+  width:100%;
+}
+
+@media(min-width:768px){
+  .footer-widget > div{
+    width:25%;
+  }
+}
+
+.widget_text p {
+  padding-right:20px;
+}
+
+
+.footer-single-widget  {
+  padding:0;
+}
+
+@media(min-width:768px){
+  .footer-blog-posts a {
+    width: 60%;
+  }   
+}
+
+.footer-single-widget  li {
+  display:flex;
+  margin-bottom: 20px;
+  list-style: none;
+  align-items:center;
+  position: relative;
+  flex-wrap:wrap;
+  
+}
+.footer-single-widget  h3{
+  color:#fff;
+  margin-left:10px;
+}
+
+.footer-single-widget img {
+  width: 100%;
+  
+}
+@media(min-width:768px){
+  .footer-single-widget img {
+    width: 25%;
+    height: 100%;
+  }
+}
+.footer-widget h3{
+  font-size: 15px;
+}
+
+.footer-coupons li {
+  justify-content: center;
+}
+.footer-coupons img{ 
+  width:50%;
+}
+
+.footer-coupons h3 {
+  position: absolute;
+  bottom:0;
+  background-color: rgba(239,121,48,.6);
+  padding:5px;
+  border-radius:5px;
+  margin:0 0 5px 0;
+}
+.copyright{
+  width:100%;
+  text-align:center;
+}
+
+/* slider */
+
+.slider {
+  width: 100%;
+  margin-top: -11px;
+}
+
+.ul-slider {
+  padding: 0;
+}
+
+.bx-wrapper {
+  margin-top: 0;
+  border: none;
+}
+
+/* upcoming tours */
+
+.upcoming-tours {
+  width: 84%;
+  margin: 20px auto;
+}
+
+.upcoming-tours img.wp-post-image {
+  width: 100%;
+}
+
+.upcoming-tours ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.upcoming-tours li {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .upcoming-tours li {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 300px;
+  }
+}
+
+.frontpage-more-info {
+  position: absolute;
+  right: -20px;
+  top: 20px;
+}
+
+.front-tours-content {
+  background-color: #ef7930;
+  padding: 4px 10px;
+  color: white;
+  text-align: center;
+}
+
+.front-tours-content h2,
+.front-tours-content p {
+  margin: 5px;
+}
+.front-tours-content p {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.bottom-content {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.bottom-content h2 {
+  margin-top: 0;
+}
+
+.blog-entries {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .blog-entries {
+    width: 60%;
+  }
+}
+.blog-entries ul,
+.front-testimonials ul {
+  list-style: none;
+}
+
+.blog-entries li {
+  display: flex;
+  margin: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog-entries li img{
+  height:100%;
+}
+.blog-entries .blog-entries-content {
+  margin-left: 20px;
+  font-size: 15px;
+ 
+}
+
+.bottom-content .view-article {
+  background-color: #ef7930;
+  padding: 5px 10px;
+  display: block;
+  width: 50%;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  content:"Continue Reading";
+  transition:all .3s ease;
+}
+.bottom-content .view-article:hover{
+  background-color:#b15a25;
+}
+@media(min-width:768px){
+  .blog-entries .blog-entries-content {
+    margin-left: 20px;
+    font-size: 15px;
+    width: 60%;
+  }
+}
+
+.front-testimonials {
+  width:100%;
+}
+
+@media (min-width: 768px) {
+  .front-testimonials {
+    width: 30%;
+    margin-left: 20px;
+    font-size: 15px;
+  }
+}
+
+.front-testimonials ul{
+  display:flex;
+  justify-content: center;
+  flex-wrap:wrap;
+}
+.front-testimonials li {
+  margin: 20px;
+  position: relative;
+  width:80%;
+}
+.front-testimonials li {
+  position: relative;
+}
+
+.front-testimonials li .single-test{
+  font-weight:400;
+}
+.front-testimonials li:hover p a,
+.front-testimonials li:hover p {
+  color: #ef7930;
+}
+
+.front-testimonials li:before {
+  content: "“";
+  display: block;
+  position: absolute;
+  left: -63px;
+  top: 60px;
+  color: #a1a1a1;
+  font-size: 155px;
+  font-family: "Pontano Sans", sans-serif;
+  line-height: 0;
+}
+
+.single-test .view-article{
+  display:none;
+}
+/*------------------------------------*\
+    PAGES
+\*------------------------------------*/
+
+.page-title {
+  text-align: center;
+  background-image: url(img/titleBG.png);
+  background-repeat: repeat-x;
+  background-position: center center;
+}
+
+.page-title span {
+  padding: 0 30px;
+  background-color: white;
+  color: #fc7c00;
+  font-size: 22px;
+}
+
+/* about us */
+
+.about-us article {
+  width: 100%;
+  padding: 20px;
+  color: #000;
+}
+
+.about-us article p {
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .about-us article {
+    width: 60%;
+  }
+}
+
+.about-us main {
+  margin: 30px 20px;
+}
+
+.about-us section {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.about-us .side-images {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .about-us .side-images {
+    width: 40%;
+  }
+}
+
+.about-us .side-images img {
+  width: auto;
+  box-shadow: 0 0 10px #ddd;
+  border: 15px solid #fff;
+  border-bottom: 60px solid #fff;
+}
+
+.about-us .side-images img {
+  transform: rotate(-10deg);
+}
+.about-us .side-images img:nth-child(odd) {
+  transform: rotate(10deg);
+}
+
+/* Tours */
+
+.tours section {
+  margin: 30px;
+}
+
+.tours article ul {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 90%;
+  padding: 0;
+}
+
+.tours article li {
+  width: 100%;
+  margin: 20px;
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .tours article li {
+    width: 45%;
+  }
+}
+
+.date-price {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+.price {
+  color: #fc7c00;
+  margin: 5px;
+  font-weight: 600;
+}
+
+.date {
+  margin: 5px;
+}
+.single-tour {
+  position: relative;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.single-tour h3 a {
+  color: #fc7c00;
+  font-size: 18px;
+}
+
+.single-tour h3 {
+  margin: 5px;
+}
+.single-tour .more-info {
+  position: absolute;
+  right: -20px;
+  top: 10%;
+}
+
+@media (min-width: 768px) {
+  .single-tour .more-info {
+    position: absolute;
+    right: 0;
+    top: 10%;
+    margin-right: -2%;
+  }
+}
+
+/*  single tour page */
+.single-world_tours .tour-top {
+  width: 100%;
+}
+.single-world_tours section {
+  width: 95%;
+  margin: auto;
+}
+
+.single-tour-thumnail {
+  text-align: center;
+}
+
+.tour-information {
+  font-size: 15px;
+  background-color: #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  width: 90%;
+  margin: 20px auto;
+  font-weight: 400;
+}
+
+.tour-information p {
+  margin: 0 0 5px 0;
+}
+
+.tour-information span {
+  font-weight: 700;
+}
+
+.travel-itinerary {
+  width: 80%;
+  font-size: 18px;
+  font-weight: 400;
+  margin: auto;
+}
+
+.travel-itinerary h2 {
+  margin-bottom: 0;
+}
+
+.travel-itinerary p {
+  margin-top: 0;
+}
+
+.single-world_tours section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.single-world_tours article {
+  width: 100%;
+}
+
+.single-world_tours .sidebar {
+  width: 100%;
+}
+
+.single-world_tours .sidebar h3 {
+  color: #fc7c00;
+  font-size: 26px;
+  font-weight: 200;
+}
+@media (min-width: 768px) {
+  .single-world_tours article {
+    width: 70%;
+  }
+
+  .single-world_tours .sidebar {
+    width: 25%;
+  }
+}
+
+.single-world_tours article span {
+  font-weight: 700;
+}
+
+/* Testimonials */
+
+.testimonials section {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.testimonials .testimonials-excerpt {
+  text-align: center;
+  font-size: 20px;
+
+  font-weight: 400;
+  margin: 20px auto;
+}
+
+.testimonials .testimonials-excerpt p {
+  border-left: 10px solid #fc8919;
+  display: inline-block;
+  padding: 10px;
+}
+.testimonials article {
+  width: 100%;
+  border: 1px solid #000;
+  margin: 30px auto;
+  background-color: #eee;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .testimonials article {
+    width: 70%;
+  }
+}
+
+.test-title {
+  border-bottom: 1px solid #000;
+  background-color: #fc8919;
+  margin: 0;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.single-testimonial {
+  font-size: 15px;
+  font-weight: 400;
+  width: 85%;
+  margin: auto;
+}
+
+.testimonials .from {
+  font-weight: 900;
+  text-align: right;
+}
+
+.single-testimonial:after {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .single-testimonial:after {
+    content: '"';
+    position: absolute;
+    top: 24px;
+    left: 0;
+    font-size: 128px;
+    font-family: cursive;
+  }
+}
+
+/* blog */
+
+.blog-thumbnail {
+  margin: 30px auto;
+  text-align: center;
+}
+
+#blog section h1 {
+  width: 100%;
+}
+
+#blog section {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#blog:not(.tours) article {
+  width: 44%;
+  margin: 20px;
+  font-size: 15px;
+}
+
+.view-article {
+  font-weight: 700;
+}
+
+/* single regular posts */
+
+.single-post section {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.single-post article {
+  width: 44%;
+  margin: 20px;
+  font-size: 15px;
+}
+
+.single-post h1 {
+  margin-bottom: 0;
+}
+
+.single-post span {
+  font-weight: 400;
+}
+
+.single-post p {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.single-post article {
+  width: 60%;
+}
+
+/*  contact us */
+
+.contact-us input:not([type="submit"]),
+.contact-us textarea {
+  width: 100%;
+  padding: 10px;
+}
+
+.contact-us input[type="submit"] {
+  padding: 10px;
+  background-color: #fc8919;
+  color: #fff;
+  font-weight: 700;
+}
+
+.contact-us label {
+  font-weight: 400;
+}
+/*------------------------------------*\
+    IMAGES
+\*------------------------------------*/
+
+/*------------------------------------*\
+	TYPOGRAPHY
+\*------------------------------------*/
+
+@font-face {
+  font-family: "Font-Name";
+  src: url("fonts/font-name.eot");
+  src: url("fonts/font-name.eot?#iefix") format("embedded-opentype"),
+    url("fonts/font-name.woff") format("woff"),
+    url("fonts/font-name.ttf") format("truetype"),
+    url("fonts/font-name.svg#font-name") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*------------------------------------*\
+    RESPONSIVE
+\*------------------------------------*/
+
+@media only screen and (min-width: 320px) {
+}
+@media only screen and (min-width: 480px) {
+}
+@media only screen and (min-width: 768px) {
+}
+@media only screen and (min-width: 1024px) {
+}
+@media only screen and (min-width: 1140px) {
+}
+@media only screen and (min-width: 1280px) {
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 144dpi) {
+}
+
+/*------------------------------------*\
+    MISC
+\*------------------------------------*/
+
+::selection {
+  background: #04a4cc;
+  color: #fff;
+  text-shadow: none;
+}
+::-webkit-selection {
+  background: #04a4cc;
+  color: #fff;
+  text-shadow: none;
+}
+::-moz-selection {
+  background: #04a4cc;
+  color: #fff;
+  text-shadow: none;
+}
+
+/*------------------------------------*\
+    WORDPRESS CORE
+\*------------------------------------*/
+
+.alignnone {
+  margin: 5px 20px 20px 0;
+}
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+a img.alignnone {
+  margin: 5px 20px 20px 0;
+}
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wp-caption {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 96%;
+  padding: 5px 3px 10px;
+  text-align: center;
+}
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0;
+}
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0;
+}
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px;
+}
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto;
+}
+.wp-caption .wp-caption-text,
+.gallery-caption {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px;
+}
+.sticky {
+}
+.bypostauthor {
+}
+
+/*------------------------------------*\
+    PRINT
+\*------------------------------------*/
+
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  @page {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
