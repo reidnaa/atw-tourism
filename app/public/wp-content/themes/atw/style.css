@@ -88,6 +88,7 @@ input:focus {
   flex-wrap: wrap;
   background-attachment: fixed;
   background-position: 0;
+  min-height:300px;
 }
 
 .header-container {
@@ -168,11 +169,15 @@ input:focus {
   transition: all .3s ease;
 }
 
-.nav ul li.current-menu-item {
+.slicknav_nav li a{
+  text-align:center;
+  text-transform: uppercase;
+}
+.nav ul li.current-menu-item ,.slicknav_nav .current-menu-item a{
   background-color: #df7900;
 }
 
-.nav ul li:hover{
+.nav ul li:hover, .slicknav_nav li:hover ,.slicknav_nav li a:hover{
   background-color: #df790f;
 }
 .nav ul li a {

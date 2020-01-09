@@ -33,6 +33,11 @@
 				<?php $featured = wp_get_attachment_image_src( get_post_thumbnail_id(get_option('page_for_posts')), 'full' ); ?>
 				<?php $featured = $featured[0]; ?>
 				<header class="header " role="banner" style="background-image:url(<?php echo $featured;?>);">
+					<div class="mobile-logo">
+						<a href="<?php echo home_url(); ?>">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
+							</a>
+					</div>	
 					<div class="header-container">
 						<!-- logo -->
 						<div class="logo">
@@ -84,6 +89,11 @@
 				<?php $featured = get_template_directory_uri() . '/img/joey.jpg'; ?>
 				
 				<header class="header " role="banner" style="background-image:url(<?php echo $featured;?>);">
+					<div class="mobile-logo">
+						<a href="<?php echo home_url(); ?>">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
+							</a>
+					</div>
 					<div class="header-container">
 						<!-- logo -->
 						<div class="logo">
@@ -107,6 +117,11 @@
 				<?php $featured = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); ?>
 				<?php $featured = $featured[0]; ?>
 				<header class="header " role="banner" style="background-image:url(<?php echo $featured;?>);">
+					<div class="mobile-logo">
+						<a href="<?php echo home_url(); ?>">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
+							</a>
+					</div>
 					<div class="header-container">
 						<!-- logo -->
 						<div class="logo">
