@@ -145,6 +145,13 @@ function add_bxslider_scripts(){
 
 add_action('wp_enqueue_scripts', 'add_bxslider_scripts');
 
+function add_slicknav_scripts(){
+    wp_enqueue_style('slicknavcss', 'https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css', array(), '1.0.10');
+    wp_enqueue_script('slicknavjs', 'https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.min.js', array('jquery'), '1.0.10', true);
+}
+
+add_action('wp_enqueue_scripts', 'add_slicknav_scripts');
+
 // Load HTML5 Blank conditional scripts
 function html5blank_conditional_scripts()
 {

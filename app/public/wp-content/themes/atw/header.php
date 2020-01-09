@@ -53,6 +53,12 @@
 			</header>
 			<?php elseif (is_front_page()): ?> 
 				<header class="header " role="banner" >
+					<div class="mobile-logo">
+						<a href="<?php echo home_url(); ?>">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
+							</a>
+					</div>
+
 					<section class="slider">
 						<?php do_action('slider_index'); ?>
 						<div class="header-container">
@@ -73,9 +79,10 @@
 						</div>
 					</section>
 			</header>
-			<?php elseif(get_page('search')):?>
+			<?php elseif(is_search()):?>
+				
 				<?php $featured = get_template_directory_uri() . '/img/joey.jpg'; ?>
-				<?php $featured = $featured[0]; ?>
+				
 				<header class="header " role="banner" style="background-image:url(<?php echo $featured;?>);">
 					<div class="header-container">
 						<!-- logo -->

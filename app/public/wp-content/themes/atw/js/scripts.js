@@ -5,7 +5,7 @@
 		'use strict';
 		 jQuery('.sidebar-gallery a').fancybox();
 
-		
+		jQuery('.nav ul').slicknav();
 		
 		jQuery('.ul-slider').bxSlider({
 			'auto': true,
@@ -19,4 +19,3 @@
 	});
 	
 })(jQuery, this);
-

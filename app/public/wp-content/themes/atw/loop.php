@@ -1,5 +1,7 @@
-<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-
+<?php 
+	
+	if (have_posts()): while (have_posts()) : the_post(); ?>
+	<?php if(get_post_type() === 'world_tours'|| get_post_type() === 'post' || get_post_type() === 'atw_testimonials'):  ?>
 	<!-- article -->
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
@@ -8,7 +10,8 @@
 			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 				<?php the_post_thumbnail('custom-size'); // Declare pixel size you need inside the array ?>
 			</a>
-		<?php endif; ?>
+		<?php endif;?>
+		
 		<!-- /post thumbnail -->
 
 		<!-- post title -->
@@ -17,17 +20,12 @@
 		</h2>
 		<!-- /post title -->
 
-		<!-- post details -->
-		<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-		<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-		<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
-		<!-- /post details -->
-		
-		<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
+		<?php echo the_excerpt(); ?>
 
-		<?php edit_post_link(); ?>
+		
 
 	</article>
+<?php endif; ?>
 	<!-- /article -->
 
 <?php endwhile; ?>
@@ -40,4 +38,4 @@
 	</article>
 	<!-- /article -->
 
-<?php endif; ?>
+<?php endif;?>
