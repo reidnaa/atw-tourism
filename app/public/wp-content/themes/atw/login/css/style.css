@@ -1,0 +1,75 @@
+body.login {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body.login div#login {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 30px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+body.login div#login,
+body.login div#login h1{
+    width:100%;
+}
+body.login div#login form#loginform {
+    width:100%;
+    border-radius:20px;
+    text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  body.login div#login {
+    width: 50%;
+  }
+  body.login div#login h1 {
+    width: 30%;
+  }
+  body.login div#login form#loginform {
+    width:50%;
+
+    }
+}
+body.login div#login h1 a {
+  background-image: url("../../img/logo.png");
+  width: 100%;
+  background-size: contain;
+}
+
+
+body.login div#login form#loginform p label {
+    text-transform:uppercase;
+}
+body.login div#login form#loginform input:not([type="submit"]) {
+    border-radius:10px;
+    font-size:15px;
+    padding:5px;
+    text-transform: uppercase;
+}
+
+body.login div#login form#loginform input:focus{
+    border-color:#df792c;
+    box-shadow: 0 0 0 3px #df792c;
+}
+
+body.login div#login form#loginform p.submit input#wp-submit {
+    background-color:#df792c;
+    border:none;
+}
+
+body.login div#login form#loginform p.submit input#wp-submit:hover{
+    background-color:#ab5e23;
+}
+body.login div#login p#nav {
+    margin:0;
+}
+
+.wp-core-ui .button, .wp-core-ui .button-secondary{
+    color:#fff;
+}
+
